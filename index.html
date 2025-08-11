@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>SUPERAÇAIAJIN</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+</head>
+
+<body>
+    <h1>FORMULARIO SUPER<strong>AÇAI</strong>AJIN</h1>
+    <form method="post" action="principal.html">
+        <fieldset>
+            <legend>
+                Dados pessoais:
+            </legend>
+            <label>Nome: <p></p><input type="text" required onchange="mudarEstado(this.value)"></label>
+            <p></p>
+            <label>Idade:<p></p><input type="number" required></label>
+            <p></p>
+            <label>Telefone:<p></p><input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required></label>
+            <p></p>
+            <label>Endereço:<p></p><input type="text" required onchange="mudarEstado(this.value)"></label>
+            <p></p>
+            <label>Planeta de Origem:
+                <br>
+                <br>
+                <select required>
+                    <option>Planeta Terra</option>
+                    <option>Planeta Namek</option>
+                    <option>Planeta Vegeta</option>
+                    <option>Outros</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Dados extras:
+            </legend>
+            <label>Raça do Universo 7 preferida:
+                <select>
+                    <option>Terráqueo</option>
+                    <option>Sayajin</option>
+                    <option>Namekuseijin</option>
+                    <option>Androide</option>
+                    <option>Outros</option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <label>Trabalho:
+                <input type="radio" name="trabalho" value="Autonomo" checked>Autonomo
+                <input type="radio" name="trabalho" value="CLT">Empregado CLT
+                <input type="radio" name="trabalho" value="Empresario">Empresario
+                <input type="radio" name="trabalho" value="Goku">Tipo Goku
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Seu açai é perfeito de que jeito?
+            </legend>
+            <input type="checkbox">Puro
+            <input type="checkbox">Com Banana
+            <input type="checkbox">Com Morango
+            <input type="checkbox" onclick="granolah(this)">Com Granola
+            <input type="checkbox">Tem gosto de Terra
+        </fieldset>
+        <fieldset>
+            <legend>
+                Qual o tamanho preferido?
+            </legend>
+            <input type="radio" name="tamanho" value="500ml" checked>500ml
+            <input type="radio" name="tamanho" value="300ml">300ml
+            <input type="radio" name="tamanho" value="100ml">100ml
+            <input type="radio" name="tamanho" value="casquinha">Casquinha
+            <input type="radio" name="tamanho" value="terra">Qual parte do gosto de terra voce nao entendeu?
+        </fieldset>
+        <fieldset>
+            Observações:<br>
+            <textarea cols="200" rows="8">Escreva suas observações...Eu gosto de açai porque...</textarea>
+        </fieldset>
+        <div>
+            <input type="submit" class="botao" value="ENVIAR">
+            <input type="reset" class="botao" value="LIMPAR">
+        </div>
+    </form>
+</body>
+<script>
+    g = 0
+    function granolah() {
+        if (event.target.checked) {
+            g++
+            if (g == 5) {
+                document.body.style.backgroundImage = "url('../_imagens/granolah.png')";
+                g = 0
+            }
+        } else {
+            document.body.style.backgroundImage = "url('_imagens/goku.png')";
+        }
+    }
+
+    function mudarEstado(nome) {
+        if (nome == 'Vegeta') {
+            document.body.style.backgroundImage = "url('_imagens/vegeta.png')";
+        }
+        else if (nome == 'Piccolo') {
+            document.body.style.backgroundImage = "url('_imagens/piccolo.png')";
+        }
+        else if (nome == 'Planeta do senhor kaioh') {
+            document.body.style.backgroundImage = "url('_imagens/KingKai.png')";
+        }
+        else if (nome == 'Tenshinhan') {
+            document.body.style.backgroundImage = "url('_imagens/Tenshinhan.png')";
+        }
+         else if (nome == 'Freeza') {
+            document.body.style.backgroundImage = "url('_imagens/Frieza_Final-Form.png')";
+        }
+        else {
+            document.body.style.backgroundImage = "url('_imagens/goku.png')";
+        }
+
+    }
+</script>
+
+</html>
