@@ -19,7 +19,7 @@
             <p></p>
             <label>Idade:<p></p><input type="number" required></label>
             <p></p>
-            <label>Telefone:<p></p><input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required></label>
+            <label>Telefone:<p></p><input type="tel" required></label>
             <p></p>
             <label>Endereço:<p></p><input type="text" required onchange="mudarEstado(this.value)"></label>
             <p></p>
@@ -39,7 +39,7 @@
                 Dados extras:
             </legend>
             <label>Raça do Universo 7 preferida:
-                <select>
+                <select required>
                     <option>Terráqueo</option>
                     <option>Sayajin</option>
                     <option>Namekuseijin</option>
@@ -56,15 +56,15 @@
                 <input type="radio" name="trabalho" value="Goku">Tipo Goku
             </label>
         </fieldset>
-        <fieldset>
+        <fieldset >
             <legend>
                 Seu açai é perfeito de que jeito?
             </legend>
-            <input type="checkbox">Puro
-            <input type="checkbox">Com Banana
-            <input type="checkbox">Com Morango
-            <input type="checkbox" onclick="granolah(this)">Com Granola
-            <input type="checkbox">Tem gosto de Terra
+            <input type="checkbox" name="acai">Puro
+            <input type="checkbox" name="acai">Com Banana
+            <input type="checkbox" name="acai">Com Morango
+            <input type="checkbox" name="acai" onclick="granolah(this)">Com Granola
+            <input type="checkbox" name="acai">Tem gosto de Terra
         </fieldset>
         <fieldset>
             <legend>
